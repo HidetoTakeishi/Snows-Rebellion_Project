@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GameOverPanel.SetActive(false);
+        restartButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,7 +27,8 @@ public class GameManager : MonoBehaviour
     public void Dead()
     {
         GameOverPanel.SetActive(true);
-        restartButton.interactable = false;
+        //restartButton.interactable = false;
+        restartButton.gameObject.SetActive(true);
         SnowPitching.DisableThrowing();
     }
 }
