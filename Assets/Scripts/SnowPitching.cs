@@ -28,11 +28,11 @@ public class SnowPitching : MonoBehaviour
             Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
 
             GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+
             Rigidbody rb = snowball.GetComponent<Rigidbody>();
             rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
         }
     }
-
 
     public void DisableThrowing()
     {

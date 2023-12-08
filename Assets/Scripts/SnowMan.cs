@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SnowMan　: MonoBehaviour
 {
-
     public float moveSpeed = 5.0f; // 敵の移動速度
     private Transform player; // プレイヤーのTransformコンポーネント
 
@@ -17,6 +16,11 @@ public class SnowMan　: MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    private void FixedUpdate()
     {
         // プレイヤーの位置を向く
         transform.LookAt(player);

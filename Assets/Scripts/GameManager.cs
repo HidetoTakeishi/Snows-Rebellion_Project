@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public GameObject GameOverPanel;
     public Button restartButton;
     public SnowPitching SnowPitching;
-
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +25,6 @@ public class GameManager : MonoBehaviour
     public void Dead()
     {
         GameOverPanel.SetActive(true);
-        //restartButton.interactable = false;
         restartButton.gameObject.SetActive(true);
         SnowPitching.DisableThrowing();
     }
