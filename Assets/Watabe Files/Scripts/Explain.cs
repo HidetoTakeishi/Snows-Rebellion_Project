@@ -11,7 +11,7 @@ public class Explain : MonoBehaviour
     void Start()
     {
         explainPanel.SetActive(true);   // 操作方法表示
-        Time.timeScale = 0;   // 時間停止
+        Time.timeScale = 0;   // 時間停止  
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Explain : MonoBehaviour
         
     }
 
-    public void QuitExplain()   // 操作方法画面を閉じる処理
+    public void QuitExplain()   // 操作方法画面を閉じる処理（ボタンに割り当て）
     {
         explainPanel.SetActive(false);   // 操作方法非表示
         Time.timeScale = 1;   // 時間を元に戻す
