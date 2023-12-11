@@ -6,8 +6,14 @@ public class SnowPitching : MonoBehaviour
 {
     public GameManager GameManager;
     public GameObject snowballPrefab;
+
     public Transform throwPoint;
+
+    [Header("飛ばす雪玉の勢い"), SerializeField]
     public float throwForce = 10.0f;
+
+    private float ammoCount = 30;   // 残弾数
+
     private bool canThrow = true;
 
     private void Update()
@@ -23,14 +29,19 @@ public class SnowPitching : MonoBehaviour
         Camera mainCamera = Camera.main;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        if(ammoCount > 0)   // 雪玉が残っている場合
         {
-            Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
+            if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            {
+                Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
 
-            GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+                GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
 
-            Rigidbody rb = snowball.GetComponent<Rigidbody>();
-            rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+                Rigidbody rb = snowball.GetComponent<Rigidbody>();
+                rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+
+                ammoCount--;   // 雪玉を一個消費
+            }
         }
     }
 
@@ -45,5 +56,10 @@ public class SnowPitching : MonoBehaviour
         {
             GameManager.Dead();
         }
+    }
+
+    public float AmmoCount   // 残弾数ゲッター
+    {
+        get { return ammoCount; }
     }
 }
