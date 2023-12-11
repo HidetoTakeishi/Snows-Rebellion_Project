@@ -18,6 +18,6 @@ public class AmmoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ammoCounter.text = "残弾数 : " + snowPitching.AmmoCount;   // 残弾数の更新
+        ammoCounter.text = "残弾数 : " + snowPitching.ammoCount;   // 残弾数の表示／更新
     }
 }

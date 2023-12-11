@@ -18,21 +18,15 @@ public class PlayerMove : MonoBehaviour
         if (xMoveLimit <= 0) xMoveLimit = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         MoveVertical();
     }
 
-    private void FixedUpdate()
-    {
-        //MoveVertical();
-    }
-
-    public void MoveVertical()
+    private void MoveVertical()
     {
         float moveX = Input.GetAxis("Horizontal") * xSpeed;   // A Dキーの入力で左右移動
-        transform.position += new Vector3(moveX, 0, 0) * Time.fixedDeltaTime;   // 移動量を加える
+        transform.position += new Vector3(moveX, 0, 0) * Time.deltaTime;   // 移動量を加える
 
         Vector3 playerPos = transform.position;
         playerPos.x = Mathf.Clamp(playerPos.x, -xMoveLimit, xMoveLimit);   // X座標を制限

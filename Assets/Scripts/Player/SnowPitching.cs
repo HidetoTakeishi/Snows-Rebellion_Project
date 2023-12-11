@@ -12,15 +12,18 @@ public class SnowPitching : MonoBehaviour
     [Header("îÚÇŒÇ∑ê·ã ÇÃê®Ç¢"), SerializeField]
     public float throwForce = 10.0f;
 
-    private float ammoCount = 30;   // écíeêî
+    public float ammoCount = 30;   // écíeêî
 
     private bool canThrow = true;
 
     private void Update()
     {
-        if (canThrow && Input.GetMouseButtonDown(0))
+        if(Time.timeScale != 0)
         {
-            ThrowSnowball();
+            if (canThrow && Input.GetMouseButtonDown(0))
+            {
+                ThrowSnowball();
+            }
         }
     }
 
@@ -45,21 +48,17 @@ public class SnowPitching : MonoBehaviour
         }
     }
 
-    public void DisableThrowing()
-    {
-        canThrow = false;
-    }
+    //public void DisableThrowing()
+    //{
+    //    canThrow = false;
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("SnowMan"))
         {
             GameManager.Dead();
+            canThrow = false;
         }
-    }
-
-    public float AmmoCount   // écíeêîÉQÉbÉ^Å[
-    {
-        get { return ammoCount; }
     }
 }

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject GameOverPanel;
     public Button restartButton;
-    public SnowPitching SnowPitching;
+    //public SnowPitching SnowPitching;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,6 @@ public class GameManager : MonoBehaviour
     {
         GameOverPanel.SetActive(true);
         restartButton.gameObject.SetActive(true);
-        SnowPitching.DisableThrowing();
+        //SnowPitching.DisableThrowing();
     }
 }
