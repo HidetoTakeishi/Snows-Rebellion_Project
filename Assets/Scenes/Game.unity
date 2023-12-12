@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f2a1a8fb8672d4a96ec33939f64d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnowMan: {fileID: 4097197147337430511, guid: 6a973198dc2f5f84489a7fb471ae2837, type: 3}
+  SnowMan: {fileID: 7362687819366866856, guid: 1ceac8896b7d4904c8f18042ff01c7a1, type: 3}
   spawnRate: 0.5
   maxEnemy: 30
 --- !u!1660057539 &9223372036854775807
