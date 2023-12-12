@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
     private GameObject vacuumArea;
 
     private SnowPitching snowPitch;
+    private PlayerMove playerMove;
     private Vacuum vacuum;
 
     // Start is called before the first frame update
     void Start()
     {
         snowPitch = GetComponent<SnowPitching>();
+        playerMove = GetComponent<PlayerMove>();
         vacuum = vacuumArea.GetComponent<Vacuum>();
     }
 
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
                 vacuumArea.SetActive(false);
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        playerMove.MoveVertical();
     }
 
     private void OnCollisionEnter(Collision collision)
