@@ -10,19 +10,24 @@ public class EnemySpawn : MonoBehaviour
 
     private float nextSpawntime;
     private BoxCollider spawnArea;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnArea = GetComponent<BoxCollider>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     private void Update()
     {
-        if (Time.time > nextSpawntime && GameObject.FindGameObjectsWithTag("SnowMan").Length < maxEnemy)
+        if (!gameManager.IsGameover)
         {
-            SpawnEnemy();
-            nextSpawntime = Time.time + spawnRate;
+            if (Time.time > nextSpawntime && GameObject.FindGameObjectsWithTag("SnowMan").Length < maxEnemy)
+            {
+                SpawnEnemy();
+                nextSpawntime = Time.time + spawnRate;
+            }
         }
     }
 
