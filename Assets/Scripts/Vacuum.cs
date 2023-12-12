@@ -10,18 +10,6 @@ public class Vacuum : MonoBehaviour
     [Header("プレイヤーの座標"), SerializeField]
     private Transform player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("SnowBall Obj"))

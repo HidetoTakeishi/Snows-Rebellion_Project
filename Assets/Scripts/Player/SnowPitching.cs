@@ -7,17 +7,10 @@ public class SnowPitching : MonoBehaviour
     [Header("飛ばす雪玉のプレファブ")]
     public GameObject snowballPrefab;
 
-    public Transform throwPoint;
-
     [Header("飛ばす雪玉の勢い"), SerializeField]
     public float throwForce = 10.0f;
 
     public float ammoCount = 30;   // 残弾数
-
-    private void Start()
-    {
-
-    }
 
     public void ThrowSnowball()
     {

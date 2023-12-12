@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     {
         if(!gameManager.IsGameover) 
         {
-            playerMove.MoveVertical();   // ‰¡ˆÚ“®
+            playerMove.MoveHorizontal();   // ‰¡ˆÚ“®
         }
     }
 

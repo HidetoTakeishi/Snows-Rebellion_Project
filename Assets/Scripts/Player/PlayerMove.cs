@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
         if (xMoveLimit <= 0) xMoveLimit = 1;
     }
 
-    public void MoveVertical()   // 左右移動を行う処理
+    public void MoveHorizontal()   // 左右移動を行う処理
     {
         float moveX = Input.GetAxis("Horizontal") * xSpeed;   // A Dキーの入力で左右移動
         transform.position += new Vector3(moveX, 0, 0) * Time.deltaTime;   // 移動量を加える
