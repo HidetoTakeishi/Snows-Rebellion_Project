@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 16bc8a9d5451ca44d8f70575adbece3a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18827617, g: 0.19113809, b: 0.19109794, a: 1}
+  m_IndirectSpecularColor: {r: 0.4660946, g: 0.46579224, b: 0.46188897, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1046,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vacuum
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01524cb0fef55344d88126fdfef04060, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1869004960016252962, guid: 01524cb0fef55344d88126fdfef04060, type: 3}
       propertyPath: m_Name
       value: Nozzle
@@ -1552,6 +1556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4814984471204214744, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6300179322115065459, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1595,6 +1603,10 @@ PrefabInstance:
     - target: {fileID: 6639830985735036105, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
       propertyPath: m_Name
       value: Snowball obj
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176620991785307524, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

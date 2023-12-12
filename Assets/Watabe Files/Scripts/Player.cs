@@ -9,14 +9,12 @@ public class Player : MonoBehaviour
 
     private SnowPitching snowPitch;
     private PlayerMove playerMove;
-    private Vacuum vacuum;
 
     // Start is called before the first frame update
     void Start()
     {
         snowPitch = GetComponent<SnowPitching>();
         playerMove = GetComponent<PlayerMove>();
-        vacuum = vacuumArea.GetComponent<Vacuum>();
     }
 
     // Update is called once per frame
@@ -40,11 +38,11 @@ public class Player : MonoBehaviour
         playerMove.MoveVertical();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.CompareTag("SnowBall Obj"))
+        if (other.gameObject.CompareTag("SnowBall Obj"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             snowPitch.ammoCount += 10;   // ê·ã ÇÃï‚è[
         }
     }
