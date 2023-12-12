@@ -7,13 +7,16 @@ public class GameManager : MonoBehaviour
 {
     public GameObject GameOverPanel;
     public Button restartButton;
-    //public SnowPitching SnowPitching;
+
+    private bool isGameover;   // ゲームオーバーになったか
 
     // Start is called before the first frame update
     void Start()
     {
         GameOverPanel.SetActive(false);
         restartButton.gameObject.SetActive(false);
+
+        isGameover = false;
     }
 
     // Update is called once per frame
@@ -26,6 +29,11 @@ public class GameManager : MonoBehaviour
     {
         GameOverPanel.SetActive(true);
         restartButton.gameObject.SetActive(true);
-        //SnowPitching.DisableThrowing();
+        isGameover = true;
+    }
+
+    public bool IsGameover   // ゲームオーバー判定のゲッター
+    {
+        get { return isGameover; }
     }
 }

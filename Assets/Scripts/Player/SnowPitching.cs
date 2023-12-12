@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnowPitching : MonoBehaviour
 {
-    public GameManager GameManager;
+    [Header("飛ばす雪玉のプレファブ")]
     public GameObject snowballPrefab;
 
     public Transform throwPoint;
@@ -14,20 +14,12 @@ public class SnowPitching : MonoBehaviour
 
     public float ammoCount = 30;   // 残弾数
 
-    private bool canThrow = true;
-
-    private void Update()
+    private void Start()
     {
-        if(Time.timeScale != 0)
-        {
-            if (canThrow && Input.GetMouseButtonDown(0))
-            {
-                ThrowSnowball();
-            }
-        }
+
     }
 
-    void ThrowSnowball()
+    public void ThrowSnowball()
     {
         Camera mainCamera = Camera.main;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -38,27 +30,13 @@ public class SnowPitching : MonoBehaviour
             {
                 Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
 
-                GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+                GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);   // 雪玉を生成
 
                 Rigidbody rb = snowball.GetComponent<Rigidbody>();
                 rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
 
                 ammoCount--;   // 雪玉を一個消費
             }
-        }
-    }
-
-    //public void DisableThrowing()
-    //{
-    //    canThrow = false;
-    //}
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("SnowMan"))
-        {
-            GameManager.Dead();
-            canThrow = false;
         }
     }
 }

@@ -26,10 +26,8 @@ public class Vacuum : MonoBehaviour
     {
         if(other.gameObject.CompareTag("SnowBall Obj"))
         {
-            Vector3 direction = player.position - other.transform.position;   // 方向の計算
-            Vector3 direcNorm = direction.normalized;   // ベクトルの正規化
-
-            other.transform.position += direcNorm * vacuumSpeed;   // 正規化したベクトルに吸引速度を掛け合わせて適用
+            Vector3 direction = (player.position - other.transform.position).normalized;   // ベクトルの計算をして正規化
+            other.transform.position += direction * vacuumSpeed;   // 正規化したベクトルに吸引速度を掛け合わせて適用
         }
     }
 }
