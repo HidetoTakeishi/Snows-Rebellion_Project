@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SnowBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameManager gameManager;
+
+    private void Awake()
     {
-        
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class SnowBall : MonoBehaviour
         if (collision.gameObject.CompareTag("SnowMan"))
         {
             Destroy(gameObject);
+            gameManager.killCount++;   // åÇîjêîÇÃÉJÉEÉìÉg
         }
     }
 }
