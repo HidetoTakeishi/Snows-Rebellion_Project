@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     {
         if(Time.timeScale != 0)
         {
-            if(!gameManager.IsGameover)
+            if(!gameManager.IsGameover && !gameManager.IsGameclear)
             {
                 if (Input.GetMouseButton(1))
                 {
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!gameManager.IsGameover) 
+        if(!gameManager.IsGameover && !gameManager.IsGameclear) 
         {
             playerMove.MoveHorizontal();   // 横移動
         }
@@ -58,9 +58,12 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("SnowMan"))
+        if(!gameManager.IsGameclear && !gameManager.IsGameover)
         {
-            gameManager.Dead();   // ゲームオーバー処理
+            if (collision.gameObject.CompareTag("SnowMan"))
+            {
+                gameManager.Dead();   // ゲームオーバー処理
+            }
         }
     }
 
