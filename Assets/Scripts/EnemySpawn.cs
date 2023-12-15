@@ -21,7 +21,7 @@ public class EnemySpawn : MonoBehaviour
 
     private void Update()
     {
-        if (!gameManager.IsGameover)
+        if (!gameManager.IsGameover && !gameManager.IsGameclear)
         {
             if (Time.time > nextSpawntime && GameObject.FindGameObjectsWithTag("SnowMan").Length < maxEnemy)
             {

@@ -12,6 +12,11 @@ public class SnowPitching : MonoBehaviour
 
     public float ammoCount = 30;   // écíeêî
 
+    private void Awake()
+    {
+
+    }
+
     public void ThrowSnowball()
     {
         Camera mainCamera = Camera.main;

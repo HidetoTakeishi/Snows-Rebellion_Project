@@ -7,6 +7,13 @@ public class SnowMan　: MonoBehaviour
     public float moveSpeed = 5.0f; // 敵の移動速度
     private Transform player; // プレイヤーのTransformコンポーネント
 
+    private GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +29,14 @@ public class SnowMan　: MonoBehaviour
 
     private void FixedUpdate()
     {
-        // プレイヤーの位置を向く
-        transform.LookAt(player);
+        if(!gameManager.IsGameover && !gameManager.IsGameclear)
+        {
+            // プレイヤーの位置を向く
+            transform.LookAt(player);
 
-        // プレイヤーに向かって移動
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            // プレイヤーに向かって移動
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
