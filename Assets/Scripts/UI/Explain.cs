@@ -50,8 +50,13 @@ public class Explain : MonoBehaviour
         Time.timeScale = 1;   // ŽžŠÔ‚ðŒ³‚É–ß‚·
     }
 
-    public void ReturnGame() 
+    public void RestartGame() 
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void RestartTitle()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
