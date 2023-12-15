@@ -10,19 +10,15 @@ public class SnowPitching : MonoBehaviour
     [Header("飛ばす雪玉の勢い"), SerializeField]
     public float throwForce = 10.0f;
 
-    public float ammoCount = 30;   // 残弾数
-
-    private void Awake()
-    {
-
-    }
+    public int bombCount = 0;        // 爆弾残弾数
+    public int snowballCount = 30;   // 雪玉残弾数
 
     public void ThrowSnowball()
     {
         Camera mainCamera = Camera.main;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        if(ammoCount > 0)   // 雪玉が残っている場合
+        if(snowballCount > 0)   // 雪玉が残っている場合
         {
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
@@ -33,7 +29,7 @@ public class SnowPitching : MonoBehaviour
                 Rigidbody rb = snowball.GetComponent<Rigidbody>();
                 rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
 
-                ammoCount--;   // 雪玉を一個消費
+                snowballCount--;   // 雪玉を一個消費
             }
         }
     }

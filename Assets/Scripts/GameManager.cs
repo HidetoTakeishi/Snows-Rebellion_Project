@@ -47,7 +47,17 @@ public class GameManager : MonoBehaviour
                 clearUI[i].SetActive(true);   // ƒNƒŠƒAUI‚Ì•\Ž¦
             }
         }
-        print(killCount);
+
+#if UNITY_EDITOR
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            Time.timeScale = 5;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+#endif
     }
 
     public void Dead()
