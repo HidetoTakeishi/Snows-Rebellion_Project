@@ -10,7 +10,6 @@ public class ChangeScene : MonoBehaviour
 
     public void OnClick()
     {
-        if (sceneName == null) return;
         SceneManager.LoadScene(sceneName);
     }
 }

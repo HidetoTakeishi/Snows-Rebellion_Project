@@ -48,14 +48,18 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // エディター用チート
 #if UNITY_EDITOR
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Time.timeScale != 0)
         {
-            Time.timeScale = 5;
-        }
-        else
-        {
-            Time.timeScale = 1;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                Time.timeScale = 5;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
 #endif
     }

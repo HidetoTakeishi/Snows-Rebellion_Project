@@ -41,6 +41,7 @@ public class Explain : MonoBehaviour
         menuPanel.SetActive(true);
 
         Time.timeScale = 0;
+        print("とまる");
     }
 
     public void QuitMenu()   // 操作方法画面を閉じる処理（ボタンに割り当て）
