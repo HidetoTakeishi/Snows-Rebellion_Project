@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class BombDisplay : MonoBehaviour
 {
     private Text bombCounter;
-    private SnowPitching snowPitching;
+    private GameObject bombCursor;
 
     // Start is called before the first frame update
     void Start()
     {
         bombCounter = GetComponent<Text>();
-        snowPitching = FindAnyObjectByType<SnowPitching>();
+        bombCursor = transform.GetChild(0).gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DispBomb(int _bomb, bool _trigger)
     {
-        bombCounter.text = "”š’e : " + snowPitching.bombCount;   // c’e”‚Ì•\¦^XV
+        bombCounter.text = "”š’e : " + _bomb;   // c’e”‚Ì•\¦^XV
+
+        bombCursor.SetActive(_trigger);
     }
 }

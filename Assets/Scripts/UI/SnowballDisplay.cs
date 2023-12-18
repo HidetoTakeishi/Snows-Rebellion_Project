@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class SnowballDisplay : MonoBehaviour
 {
     private Text ammoCounter;
-    private SnowPitching snowPitching;
+    private GameObject bombCursor;
 
     // Start is called before the first frame update
     void Start()
     {
         ammoCounter = GetComponent<Text>();
-        snowPitching = FindAnyObjectByType<SnowPitching>();
+
+        bombCursor = transform.GetChild(0).gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DispSnowball(int _snowball, bool _trigger)
     {
-        ammoCounter.text = "雪玉 : " + snowPitching.snowballCount;   // 残弾数の表示／更新
+        ammoCounter.text = "雪玉 : " + _snowball;
+
+        bombCursor.SetActive(_trigger);
     }
 }

@@ -42,8 +42,10 @@ public class Player : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    snowPitch.ThrowSnowball();   // ê·ã ÇìäÇ∞ÇÈ
+                    snowPitch.ThrowWeapon();   // ê·ã ÇìäÇ∞ÇÈ
                 }
+
+                snowPitch.SwitchWeapon();
             }
         }
     }
