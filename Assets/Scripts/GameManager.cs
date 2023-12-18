@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject GameOverPanel;
     public Button restartButton;
+    public Button MenuButton;
 
     [Header("クリア時に表示するUI"), SerializeField]
     private GameObject[] clearUI;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
             isGameclear = true;
             for (int i = 0; i < clearUI.Length; i++)
             {
+                MenuButton.gameObject.SetActive(false);
                 clearUI[i].SetActive(true);   // クリアUIの表示
             }
         }
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
     {
         GameOverPanel.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        MenuButton.gameObject.SetActive(false);
         isGameover = true;
     }
 

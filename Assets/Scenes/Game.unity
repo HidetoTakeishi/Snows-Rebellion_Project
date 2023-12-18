@@ -2839,6 +2839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1331133094}
   restartButton: {fileID: 261995895}
+  MenuButton: {fileID: 2078147295}
   clearUI:
   - {fileID: 905989271}
   - {fileID: 1319716895}
