@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         if(Time.timeScale != 0)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.RightShift))
             {
                 Time.timeScale = 5;
             }
