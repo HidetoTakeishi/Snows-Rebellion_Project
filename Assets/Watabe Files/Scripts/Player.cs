@@ -44,6 +44,8 @@ public class Player : MonoBehaviour
                 {
                     snowPitch.ThrowSnowball();   // ê·ã ÇìäÇ∞ÇÈ
                 }
+
+                snowPitch.SwitchWeapon();
             }
         }
     }

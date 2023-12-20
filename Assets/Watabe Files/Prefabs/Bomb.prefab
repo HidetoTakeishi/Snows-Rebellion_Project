@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8396870868481907796}
   - component: {fileID: 3082585168943698003}
-  - component: {fileID: 7697459209944619962}
+  - component: {fileID: 2474596114031791984}
   m_Layer: 0
   m_Name: Explode Range
   m_TagString: Untagged
@@ -54,7 +54,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7697459209944619962
+--- !u!114 &2474596114031791984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6746796913452618766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d31b5bb4dea7274683fc97ee88ef071, type: 3}
+  m_Script: {fileID: 11500000, guid: e0aa7b82b2a00ac40849f30939ca4448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5288377109084795314
@@ -117,7 +117,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 80bfb692106384a409ffa095e7b2ea0a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8087f3b60b1e86c48898b99af671051a, type: 2}
+      objectReference: {fileID: 2100000, guid: 1d851228b25458646a1d2f337a9f7c14, type: 2}
     - target: {fileID: 919132149155446097, guid: 80bfb692106384a409ffa095e7b2ea0a, type: 3}
       propertyPath: m_Name
       value: Bomb
@@ -137,7 +137,7 @@ PrefabInstance:
       addedObject: {fileID: 8449316218863873945}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 80bfb692106384a409ffa095e7b2ea0a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5198959507924264781}
+      addedObject: {fileID: 6644637988422541914}
   m_SourcePrefab: {fileID: 100100000, guid: 80bfb692106384a409ffa095e7b2ea0a, type: 3}
 --- !u!1 &5018557168832695523 stripped
 GameObject:
@@ -192,7 +192,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5198959507924264781
+--- !u!114 &6644637988422541914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,11 +201,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5018557168832695523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02ce0e8b6c576443aba61b7c9e6dc76, type: 3}
+  m_Script: {fileID: 11500000, guid: ef302a5ee8cfcd74d8f539e453945e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explodeDelay: 1
-  explodeRange: 100
+  explodeRange: 25
   sphereCollider: {fileID: 3082585168943698003}
 --- !u!4 &5687676392292161113 stripped
 Transform:

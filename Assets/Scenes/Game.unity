@@ -226,8 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowballPrefab: {fileID: 1405861582280605879, guid: 3d4ef32bcb7dfe24bb05ee1631dc6e23, type: 3}
+  bombPrefab: {fileID: 5018557168832695523, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
   throwForce: 60
-  bombCount: 0
+  bombCount: 5
   snowballCount: 30
 --- !u!65 &171815674
 BoxCollider:
@@ -2947,7 +2948,6 @@ GameObject:
   - component: {fileID: 1841338438}
   - component: {fileID: 1841338441}
   - component: {fileID: 1841338440}
-  - component: {fileID: 1841338439}
   m_Layer: 5
   m_Name: Kill Count
   m_TagString: Untagged
@@ -2974,18 +2974,6 @@ RectTransform:
   m_AnchoredPosition: {x: 410, y: -57.5}
   m_SizeDelta: {x: 400, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1841338439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841338437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5126c531664e432418172e05a192ed7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1841338440
 MonoBehaviour:
   m_ObjectHideFlags: 0

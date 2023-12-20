@@ -15,7 +15,7 @@ public class Bomb : MonoBehaviour
 
     private void Awake()
     {
-        //sphereCollider = sphereCollider.GetComponent<SphereCollider>();
+        sphereCollider = sphereCollider.GetComponent<SphereCollider>();
     }
 
     // Start is called before the first frame update
