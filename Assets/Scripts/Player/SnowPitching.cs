@@ -23,13 +23,13 @@ public class SnowPitching : MonoBehaviour
         Camera mainCamera = Camera.main;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        if(snowballCount > 0)   // 雪玉が残っている場合
+        if (Physics.Raycast(ray, out RaycastHit hitInfo))
         {
-            if (Physics.Raycast(ray, out RaycastHit hitInfo))
-            {
-                Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
+            Vector3 throwDirection = (hitInfo.point - transform.position).normalized;
 
-                if(useBomb)
+            if (useBomb)   // 爆弾を使う場合
+            {
+                if(bombCount > 0)   // 爆弾が残っている場合
                 {
                     GameObject bomb = Instantiate(bombPrefab, transform.position, Quaternion.identity);   // 爆弾を生成
 
@@ -38,7 +38,10 @@ public class SnowPitching : MonoBehaviour
 
                     bombCount--;   // 爆弾を一個消費
                 }
-                else
+            }
+            else   // 雪玉を使う場合
+            {
+                if (snowballCount > 0)   // 雪玉が残っている場合
                 {
                     GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);   // 雪玉を生成
 
