@@ -2844,7 +2844,7 @@ MonoBehaviour:
   clearUI:
   - {fileID: 905989271}
   - {fileID: 1319716895}
-  clearConditions: 0
+  clearConditions: 10
   killCount: 0
 --- !u!114 &1552788767
 MonoBehaviour:
