@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject GameOverPanel;
     public Button restartButton;
+    public Button MenuButton;
 
     [Header("クリア時に表示するUI"), SerializeField]
     private GameObject[] clearUI;
@@ -18,6 +19,19 @@ public class GameManager : MonoBehaviour
 
     private bool isGameclear;   // ゲームクリアになったか
     private bool isGameover;    // ゲームオーバーになったか
+
+    private SnowPitching snowPitch;
+    private KillcountDisplay killCounter;
+    private SnowballDisplay snowballCounter;
+    private BombDisplay bombCounter;
+
+    private void Awake()
+    {
+        snowPitch = FindAnyObjectByType<SnowPitching>();
+        killCounter = FindAnyObjectByType<KillcountDisplay>();
+        snowballCounter = FindAnyObjectByType<SnowballDisplay>();
+        bombCounter = FindAnyObjectByType<BombDisplay>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -44,16 +58,26 @@ public class GameManager : MonoBehaviour
             isGameclear = true;
             for (int i = 0; i < clearUI.Length; i++)
             {
+                MenuButton.gameObject.SetActive(false);
                 clearUI[i].SetActive(true);   // クリアUIの表示
             }
         }
-        print(killCount);
+
+        killCounter.DispKillcount(killCount);   // 撃破数の表示
+        snowballCounter.DispSnowball(snowPitch.snowballCount, !snowPitch.UseBomb);   // 雪玉の数の表示
+        bombCounter.DispBomb(snowPitch.bombCount, snowPitch.UseBomb);   // 爆弾の数の表示
+
+        // エディター用チート
+#if UNITY_EDITOR
+        EditorCheat();
+#endif
     }
 
     public void Dead()
     {
         GameOverPanel.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        MenuButton.gameObject.SetActive(false);
         isGameover = true;
     }
 
@@ -70,5 +94,20 @@ public class GameManager : MonoBehaviour
     public int ClearConditions   // クリア条件のゲッター
     {
         get { return clearConditions; }
+    }
+
+    private void EditorCheat()
+    {
+        if (Time.timeScale != 0)
+        {
+            if (Input.GetKey(KeyCode.RightShift))
+            {
+                Time.timeScale = 5;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
     }
 }

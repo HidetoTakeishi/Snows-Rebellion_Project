@@ -2,24 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
-
-    public string sceneName;    // 読み込むシーン名
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("読み込むシーンの名前"), SerializeField]
+    private string sceneName;
 
     public void OnClick()
     {

@@ -27,7 +27,7 @@ public class SnowManÅ@: MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if(!gameManager.IsGameover && !gameManager.IsGameclear)
         {
