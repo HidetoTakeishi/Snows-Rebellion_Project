@@ -952,8 +952,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6644637988422541914, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
       propertyPath: explodeDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644637988422541914, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
+      propertyPath: explodeRange
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6644637988422541914, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
+      propertyPath: explodeEffect
+      value: 
+      objectReference: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
     - target: {fileID: 6820001624231832886, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

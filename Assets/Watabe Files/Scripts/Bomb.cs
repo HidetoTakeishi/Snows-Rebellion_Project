@@ -13,6 +13,9 @@ public class Bomb : MonoBehaviour
     [Header("爆発の当たり判定となるオブジェクト"), SerializeField]
     private SphereCollider sphereCollider;
 
+    [Header("爆発エフェクト"), SerializeField]
+    private GameObject explodeEffect;
+
     private void Awake()
     {
         sphereCollider = sphereCollider.GetComponent<SphereCollider>();
@@ -37,11 +40,13 @@ public class Bomb : MonoBehaviour
     private void Begine()   // 起爆処理
     {
         sphereCollider.enabled = true;
+
+        if (explodeEffect != null) Instantiate(explodeEffect, transform.position, Quaternion.identity);   // 爆発エフェクト生成
     }
 
     private void Explode()   // 爆破範囲の更新処理
     {
-        if(sphereCollider.enabled) 
+        if (sphereCollider.enabled)
         {
             if (sphereCollider.radius <= explodeRange)
             {
