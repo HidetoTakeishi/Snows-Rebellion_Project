@@ -962,37 +962,11 @@ PrefabInstance:
       propertyPath: explodeEffect
       value: 
       objectReference: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
-    - target: {fileID: 6820001624231832886, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1d851228b25458646a1d2f337a9f7c14, type: 2}
-    m_RemovedComponents:
-    - {fileID: 5198959507924264781, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
-    - {fileID: 7697459209944619962, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6746796913452618766, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1348232550}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
---- !u!1 &1348232548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6746796913452618766, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
-  m_PrefabInstance: {fileID: 1348232546}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1348232550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348232548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0aa7b82b2a00ac40849f30939ca4448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1468870340
 GameObject:
   m_ObjectHideFlags: 0

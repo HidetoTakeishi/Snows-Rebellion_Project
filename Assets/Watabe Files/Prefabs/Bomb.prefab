@@ -204,9 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef302a5ee8cfcd74d8f539e453945e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodeDelay: 1
-  explodeRange: 25
+  explodeDelay: 2
+  explodeRange: 50
   sphereCollider: {fileID: 3082585168943698003}
+  explodeEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
 --- !u!4 &5687676392292161113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80bfb692106384a409ffa095e7b2ea0a, type: 3}

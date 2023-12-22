@@ -41,7 +41,11 @@ public class Bomb : MonoBehaviour
     {
         sphereCollider.enabled = true;
 
-        if (explodeEffect != null) Instantiate(explodeEffect, transform.position, Quaternion.identity);   // 爆発エフェクト生成
+        if (explodeEffect != null)
+        {
+            GameObject _explode = Instantiate(explodeEffect, transform.position, Quaternion.identity);   // 爆発エフェクト生成
+            _explode.transform.localScale *= explodeRange / 2.5f;   // エフェクトのサイズ調整
+        }
     }
 
     private void Explode()   // 爆破範囲の更新処理
