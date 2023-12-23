@@ -18,6 +18,6 @@ public class KillCountDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        killCounter.text = "Œ‚”j” : " + gameManager.killCount;
+        killCounter.text = "Œ‚”j” : " + gameManager.killCount + " / " + gameManager.ClearConditions;
     }
 }
