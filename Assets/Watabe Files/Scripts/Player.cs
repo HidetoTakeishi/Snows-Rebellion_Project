@@ -7,12 +7,14 @@ public class Player : MonoBehaviour
     [Header("吸引エリアのオブジェクト"), SerializeField]
     private GameObject vacuumArea;
 
+    private AudioSource audioSource;
     private GameManager gameManager;
     private SnowPitching snowPitch;
     private PlayerMove playerMove;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         gameManager = FindAnyObjectByType<GameManager>();
         snowPitch = GetComponent<SnowPitching>();
         playerMove = GetComponent<PlayerMove>();
@@ -27,13 +29,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale != 0)
+        if (Time.timeScale != 0)
         {
-            if(!gameManager.IsGameover && !gameManager.IsGameclear)
+            if (!gameManager.IsGameover && !gameManager.IsGameclear)
             {
                 if (Input.GetMouseButton(1))
                 {
                     vacuumArea.SetActive(true);   // 吸引エリアを有効化
+
                 }
                 else
                 {
@@ -45,14 +48,14 @@ public class Player : MonoBehaviour
                     snowPitch.ThrowSnowball();   // 雪玉を投げる
                 }
 
-                snowPitch.SwitchWeapon();
+                snowPitch.SwitchWeapon(audioSource);
             }
         }
     }
 
     private void FixedUpdate()
     {
-        if(!gameManager.IsGameover && !gameManager.IsGameclear) 
+        if (!gameManager.IsGameover && !gameManager.IsGameclear)
         {
             playerMove.MoveHorizontal();   // 横移動
         }
@@ -60,7 +63,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!gameManager.IsGameclear && !gameManager.IsGameover)
+        if (!gameManager.IsGameclear && !gameManager.IsGameover)
         {
             if (collision.gameObject.CompareTag("SnowMan"))
             {

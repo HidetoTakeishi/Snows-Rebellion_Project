@@ -18,6 +18,9 @@ public class SnowPitching : MonoBehaviour
 
     private bool useBomb = false;   // ”š’e‚ğg‚¤‚©‚Ç‚¤‚©
 
+    [Header("•ŠíØ‚è‘Ö‚¦SE"), SerializeField]
+    private AudioClip switchWeaponSE;
+
     public void ThrowSnowball()
     {
         Camera mainCamera = Camera.main;
@@ -54,8 +57,13 @@ public class SnowPitching : MonoBehaviour
         }
     }
 
-    public void SwitchWeapon()   // •Ší‚ÌØ‚è‘Ö‚¦ˆ—
+    public void SwitchWeapon(AudioSource _audioSource)   // •Ší‚ÌØ‚è‘Ö‚¦ˆ—
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) useBomb = !useBomb;
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            useBomb = !useBomb;
+
+            _audioSource.PlayOneShot(switchWeaponSE);
+        }
     }
 }
