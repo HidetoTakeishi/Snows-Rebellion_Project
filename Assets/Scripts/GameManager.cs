@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(killCount >= clearConditions)   // クリア条件を達成したら
+        if(killCount >= clearConditions && !isGameover)   // クリア条件を達成したら
         {
             isGameclear = true;
             for (int i = 0; i < clearUI.Length; i++)
