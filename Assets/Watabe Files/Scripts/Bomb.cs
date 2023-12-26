@@ -16,16 +16,23 @@ public class Bomb : MonoBehaviour
     [Header("爆発エフェクト"), SerializeField]
     private GameObject explodeEffect;
 
+    [Header("爆発SE"), SerializeField]
+    private AudioClip explodeSE;
+
+    private AudioSource audioSource;
+
     private void Awake()
     {
         sphereCollider = sphereCollider.GetComponent<SphereCollider>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         // 値の調整
-        if(explodeDelay <= 0) explodeDelay = 1;
+        if (explodeDelay <= 0) explodeDelay = 1;
+        if (explodeRange <= 0) explodeRange = 1;
 
         sphereCollider.enabled = false;
         Invoke("Begine", explodeDelay);
@@ -46,6 +53,8 @@ public class Bomb : MonoBehaviour
             GameObject _explode = Instantiate(explodeEffect, transform.position, Quaternion.identity);   // 爆発エフェクト生成
             _explode.transform.localScale *= explodeRange / 2.5f;   // エフェクトのサイズ調整
         }
+
+        audioSource.PlayOneShot(explodeSE);   // 爆発SE再生
     }
 
     private void Explode()   // 爆破範囲の更新処理
