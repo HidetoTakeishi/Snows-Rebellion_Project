@@ -48,6 +48,8 @@ public class Bomb : MonoBehaviour
     {
         sphereCollider.enabled = true;
 
+        GetComponent<MeshRenderer>().enabled = false;   // 爆弾を消す（見た目だけ）
+
         if (explodeEffect != null)
         {
             GameObject _explode = Instantiate(explodeEffect, transform.position, Quaternion.identity);   // 爆発エフェクト生成
@@ -55,6 +57,8 @@ public class Bomb : MonoBehaviour
         }
 
         audioSource.PlayOneShot(explodeSE);   // 爆発SE再生
+
+        Invoke("DestroyMe", 5);
     }
 
     private void Explode()   // 爆破範囲の更新処理
@@ -67,8 +71,13 @@ public class Bomb : MonoBehaviour
             }
             else
             {
-                Destroy(this.gameObject);
+                sphereCollider.enabled = false;   // コライダーを無効化
             }
         }
+    }
+
+    private void DestroyMe()
+    {
+        Destroy(this.gameObject);
     }
 }
