@@ -3,7 +3,12 @@ guid: 813d0bedf0bd41240b35fcb886add5ac
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explainPanel: {instanceID: 0}
+  - menuPanel: {instanceID: 0}
+  - menubutton: {instanceID: 0}
+  - returnButton: {instanceID: 0}
+  - closeSE: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

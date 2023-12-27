@@ -17,6 +17,9 @@ public class Explain : MonoBehaviour
     [Header("ゲームに戻るボタン"), SerializeField]
     private GameObject returnButton;
 
+    public AudioClip closeSE;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,8 @@ public class Explain : MonoBehaviour
         menubutton.SetActive(false);
         menuPanel.SetActive(false);
         Time.timeScale = 0;   // 時間停止  
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void QuitExplain()   // 操作方法画面を閉じる処理（ボタンに割り当て）
@@ -46,6 +51,7 @@ public class Explain : MonoBehaviour
 
     public void QuitMenu()   // 操作方法画面を閉じる処理（ボタンに割り当て）
     {
+        audioSource.PlayOneShot(closeSE);//SE再生
         menubutton.SetActive(true);   // 操作方法非表示
         menuPanel.SetActive(false);
         Time.timeScale = 1;   // 時間を元に戻す
