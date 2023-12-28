@@ -20,6 +20,16 @@ public class GameManager : MonoBehaviour
     private bool isGameclear;   // ゲームクリアになったか
     private bool isGameover;    // ゲームオーバーになったか
 
+    [Header("ゲームオーバー時のSE"), SerializeField]
+    private AudioClip gameocerSE;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +82,7 @@ public class GameManager : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         MenuButton.gameObject.SetActive(false);
         isGameover = true;
+        audioSource.PlayOneShot(gameocerSE);
     }
 
     public bool IsGameover   // ゲームオーバー判定のゲッター

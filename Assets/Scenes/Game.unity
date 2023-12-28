@@ -4797,6 +4797,7 @@ MonoBehaviour:
   - {fileID: 1319716895}
   clearConditions: 10
   killCount: 0
+  gameocerSE: {fileID: 8300000, guid: 4d02e71cd9d8c3541a266f4eb366b8d2, type: 3}
 --- !u!114 &1552788767
 MonoBehaviour:
   m_ObjectHideFlags: 0
