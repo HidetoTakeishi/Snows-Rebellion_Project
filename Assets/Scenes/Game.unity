@@ -4815,6 +4815,7 @@ MonoBehaviour:
   menubutton: {fileID: 2078147293}
   returnButton: {fileID: 887653162}
   closeSE: {fileID: 8300000, guid: b85cc1bf1d21ecf4082a4dd8cc502efa, type: 3}
+  openSE: {fileID: 8300000, guid: 35e37cb41d273ef498a83a73996c9fda, type: 3}
 --- !u!82 &1552788768
 AudioSource:
   m_ObjectHideFlags: 0

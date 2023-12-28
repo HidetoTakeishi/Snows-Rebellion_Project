@@ -18,6 +18,7 @@ public class Explain : MonoBehaviour
     private GameObject returnButton;
 
     public AudioClip closeSE;
+    public AudioClip openSE;
     AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -29,10 +30,12 @@ public class Explain : MonoBehaviour
         Time.timeScale = 0;   // 時間停止  
 
         audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(openSE);//SE再生
     }
 
     public void QuitExplain()   // 操作方法画面を閉じる処理（ボタンに割り当て）
     {
+        audioSource.PlayOneShot(closeSE);//SE再生
         explainPanel.SetActive(false);   // 操作方法非表示
         menubutton.SetActive(true);
         Time.timeScale = 1;   // 時間を元に戻す
@@ -42,6 +45,7 @@ public class Explain : MonoBehaviour
     //メニュー
     public void OpenMenu()
     {
+        audioSource.PlayOneShot(openSE);//SE再生
         menubutton.SetActive(false);
         menuPanel.SetActive(true);
 
