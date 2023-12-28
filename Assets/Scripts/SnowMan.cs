@@ -7,11 +7,15 @@ public class SnowMan　: MonoBehaviour
     public float moveSpeed = 5.0f; // 敵の移動速度
     private Transform player; // プレイヤーのTransformコンポーネント
 
+    bool trigger = true;
+
     private GameManager gameManager;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -24,7 +28,19 @@ public class SnowMan　: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.timeScale == 0)
+        {
+            audioSource.Stop();
+            trigger = true;
+        }
+        else
+        {
+            if(trigger)
+            {
+                audioSource.Play();
+                trigger = false;
+            }
+        }
     }
 
     void FixedUpdate()
