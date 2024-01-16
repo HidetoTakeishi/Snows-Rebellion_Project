@@ -24,11 +24,14 @@ public class Explain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        explainPanel.SetActive(true);   // 操作方法表示
+        if (explainPanel != null)
+        {
+            explainPanel.SetActive(true);   // 操作方法表示
+            Time.timeScale = 0;   // 時間停止  
+        }
+
         menubutton.SetActive(false);
         menuPanel.SetActive(false);
-        Time.timeScale = 0;   // 時間停止  
-
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(openSE);//SE再生
     }
@@ -45,6 +48,8 @@ public class Explain : MonoBehaviour
     //メニュー
     public void OpenMenu()
     {
+        if (explainPanel == null) return;
+
         audioSource.PlayOneShot(openSE);//SE再生
         menubutton.SetActive(false);
         menuPanel.SetActive(true);
