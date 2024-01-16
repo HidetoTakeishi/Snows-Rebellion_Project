@@ -3088,7 +3088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb5dcf191a750ba4a8e2576688c5f0ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40.6
+      value: -0.012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb5dcf191a750ba4a8e2576688c5f0ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3905,7 +3905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0fcffdd1e34be42bc1d25cf0585431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Game 2
+  sceneName: 
 --- !u!114 &1319716898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4170,7 +4170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Pivot.x
@@ -4257,11 +4257,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
---- !u!1 &1340706567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
-  m_PrefabInstance: {fileID: 1340706566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1340706568 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
@@ -4810,7 +4805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813d0bedf0bd41240b35fcb886add5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explainPanel: {fileID: 1340706567}
+  explainPanel: {fileID: 0}
   menuPanel: {fileID: 1730280747}
   menubutton: {fileID: 2078147293}
   returnButton: {fileID: 887653162}
@@ -6168,7 +6163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Pivot.x
