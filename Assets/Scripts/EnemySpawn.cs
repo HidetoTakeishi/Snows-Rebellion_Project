@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject SnowMan;
+    public GameObject BombMan;
+    private GameObject Enemy;
     public float spawnRate = 2.0f;
     public int maxEnemy = 10;
 
@@ -39,6 +41,15 @@ public class EnemySpawn : MonoBehaviour
             Random.Range(transform.position.z - spawnArea.size.z / 2, transform.position.z + spawnArea.size.z / 2)
         );
 
-        Instantiate(SnowMan, randomPosition, Quaternion.identity);
+        int rand = Random.Range(0, 2);
+        if (rand == 0)
+        {
+            Enemy = SnowMan;
+        }
+        else if (rand == 1)
+        {
+            Enemy = BombMan;
+        }
+        Instantiate(Enemy, randomPosition, Quaternion.identity);
     }
 }
