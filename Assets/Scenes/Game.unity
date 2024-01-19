@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowballPrefab: {fileID: 1405861582280605879, guid: 3d4ef32bcb7dfe24bb05ee1631dc6e23, type: 3}
-  bombPrefab: {fileID: 5018557168832695523, guid: bf3e802b5863b7648af7b6b3cf7a77a3, type: 3}
+  bombPrefab: {fileID: 8380729583947848825, guid: ba641c3d194e59a46b9f16b9088573e4, type: 3}
   throwForce: 60
   bombCount: 5
   snowballCount: 30
