@@ -67,10 +67,10 @@ public class SnowMan@: MonoBehaviour
 
         if (collision.gameObject.CompareTag("SnowBall"))
         {
+            audioSource.PlayOneShot(DestoroySE);//SEÄ¶
             // á‹Ê‚É“–‚½‚Á‚½ê‡A“G‚ğÁ‹
             Destroy(gameObject);
             DropItem();
-            audioSource.PlayOneShot(DestoroySE);//SEÄ¶
         }
     }
 
