@@ -80,4 +80,13 @@ public class Bomb : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("SnowMan"))
+        {
+            Begine();
+            sphereCollider.enabled = true;
+        }
+    }
 }
