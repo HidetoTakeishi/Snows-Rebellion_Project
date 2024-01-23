@@ -41,6 +41,7 @@ public class Explain : MonoBehaviour
         else
         {
             menubutton.SetActive(true);
+            Time.timeScale = 1;
         }
     }
 
