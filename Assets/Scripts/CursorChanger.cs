@@ -10,12 +10,21 @@ public class CursorChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
+
+        sightImg.SetActive(!Cursor.visible);
     }
 
     // Update is called once per frame
     void Update()
     {
-        sightImg.transform.position = Input.mousePosition;
+        sightImg.transform.position = Input.mousePosition;   // É}ÉEÉXÇ…í«è]Ç≥ÇπÇÈ
+    }
+
+    public void ChangeCursorVisible()
+    {
+        Cursor.visible = !Cursor.visible;
+
+        sightImg.SetActive(!Cursor.visible);
     }
 }

@@ -21,9 +21,13 @@ public class Explain : MonoBehaviour
     public AudioClip openSE;
     AudioSource audioSource;
 
+    private CursorChanger cursorChanger;
+
     // Start is called before the first frame update
     void Start()
     {
+        cursorChanger = FindAnyObjectByType<CursorChanger>();
+
         if (explainPanel != null)
         {
             explainPanel.SetActive(true);   // 操作方法表示
@@ -42,6 +46,8 @@ public class Explain : MonoBehaviour
         explainPanel.SetActive(false);   // 操作方法非表示
         menubutton.SetActive(true);
         Time.timeScale = 1;   // 時間を元に戻す
+
+        cursorChanger.ChangeCursorVisible();
     }
 
 
@@ -53,6 +59,7 @@ public class Explain : MonoBehaviour
         audioSource.PlayOneShot(openSE);//SE再生
         menubutton.SetActive(false);
         menuPanel.SetActive(true);
+        cursorChanger.ChangeCursorVisible();
 
         Time.timeScale = 0;
         print("とまる");
@@ -63,6 +70,8 @@ public class Explain : MonoBehaviour
         audioSource.PlayOneShot(closeSE);//SE再生
         menubutton.SetActive(true);   // 操作方法非表示
         menuPanel.SetActive(false);
+        cursorChanger.ChangeCursorVisible();
+
         Time.timeScale = 1;   // 時間を元に戻す
     }
 
