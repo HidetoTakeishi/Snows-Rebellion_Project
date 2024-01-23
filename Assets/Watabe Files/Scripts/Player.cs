@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private SnowPitching snowPitch;
     private PlayerMove playerMove;
 
+    public AudioClip DestoroySE;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     snowPitch.ThrowSnowball();   // ê·ã ÇìäÇ∞ÇÈ
+                    audioSource.PlayOneShot(DestoroySE);//SEçƒê∂
                 }
 
                 snowPitch.SwitchWeapon(audioSource);

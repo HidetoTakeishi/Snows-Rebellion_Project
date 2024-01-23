@@ -28,16 +28,21 @@ public class Explain : MonoBehaviour
     {
         cursorChanger = FindAnyObjectByType<CursorChanger>();
 
-        if (explainPanel != null)
-        {
-            explainPanel.SetActive(true);   // 操作方法表示
-            Time.timeScale = 0;   // 時間停止  
-        }
-
-        menubutton.SetActive(false);
         menuPanel.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(openSE);//SE再生
+
+        if (explainPanel != null)
+        {
+            menubutton.SetActive(false);
+            explainPanel.SetActive(true);   // 操作方法表示
+            Time.timeScale = 0;   // 時間停止
+        }
+        else
+        {
+            menubutton.SetActive(true);
+            Time.timeScale = 1;
+        }
     }
 
     public void QuitExplain()   // 操作方法画面を閉じる処理（ボタンに割り当て）
@@ -54,7 +59,7 @@ public class Explain : MonoBehaviour
     //メニュー
     public void OpenMenu()
     {
-        if (explainPanel == null) return;
+        //if (explainPanel == null) return;
 
         audioSource.PlayOneShot(openSE);//SE再生
         menubutton.SetActive(false);

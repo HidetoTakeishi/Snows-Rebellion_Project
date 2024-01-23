@@ -11,6 +11,7 @@ public class SnowMan@: MonoBehaviour
 
     private GameManager gameManager;
     private AudioSource audioSource;
+    public AudioClip DestoroySE;
     public GameObject SnowBall;
 
     private void Awake()
@@ -66,6 +67,7 @@ public class SnowMan@: MonoBehaviour
 
         if (collision.gameObject.CompareTag("SnowBall"))
         {
+            audioSource.PlayOneShot(DestoroySE);//SEÄ¶
             // á‹Ê‚É“–‚½‚Á‚½ê‡A“G‚ğÁ‹
             Destroy(gameObject);
             DropItem();
