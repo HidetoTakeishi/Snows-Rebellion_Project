@@ -6728,8 +6728,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f2a1a8fb8672d4a96ec33939f64d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnowMan: {fileID: 7362687819366866856, guid: 1ceac8896b7d4904c8f18042ff01c7a1, type: 3}
-  BombMan: {fileID: 3341995888784974571, guid: 245487310b66a1f49b32baaef092d8eb, type: 3}
+  Enemy1: {fileID: 7362687819366866856, guid: 1ceac8896b7d4904c8f18042ff01c7a1, type: 3}
+  Weight1: 1
+  Enemy2: {fileID: 3341995888784974571, guid: 245487310b66a1f49b32baaef092d8eb, type: 3}
+  Weight2: 0
+  Enemy3: {fileID: 0}
+  Weight3: 0
   spawnRate: 0.5
   maxEnemy: 30
 --- !u!4 &2128406724 stripped

@@ -85,6 +85,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a767ab043d96704b8b2d13b856644f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7767195912577345889}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a767ab043d96704b8b2d13b856644f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3614521160255318579}
   m_SourcePrefab: {fileID: 100100000, guid: 7a767ab043d96704b8b2d13b856644f3, type: 3}
 --- !u!1 &3341995888784974571 stripped
 GameObject:
@@ -140,3 +143,16 @@ MonoBehaviour:
   BombMan: {fileID: 0}
   spawnRate: 2
   maxEnemy: 10
+--- !u!114 &3614521160255318579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341995888784974571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0557e30fad2563349bef178d30592ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5

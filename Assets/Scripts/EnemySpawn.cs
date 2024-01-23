@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject SnowMan;
-    public GameObject BombMan;
+    public GameObject Enemy1;
+    public int Weight1 = 0;
+    public GameObject Enemy2;
+    public int Weight2 = 0;
+    public GameObject Enemy3;
+    public int Weight3 = 0;
     private GameObject Enemy;
     public float spawnRate = 2.0f;
     public int maxEnemy = 10;
@@ -41,14 +45,18 @@ public class EnemySpawn : MonoBehaviour
             Random.Range(transform.position.z - spawnArea.size.z / 2, transform.position.z + spawnArea.size.z / 2)
         );
 
-        int rand = Random.Range(0, 2);
-        if (rand == 0)
+        int rand = Random.Range(0, Weight1 + Weight2 + Weight3);
+        if (rand < Weight1)
         {
-            Enemy = SnowMan;
+            Enemy = Enemy1;
         }
-        else if (rand == 1)
+        else if (rand < Weight2 + Weight1)
         {
-            Enemy = BombMan;
+            Enemy = Enemy2;
+        }
+        else if (rand < Weight3 + Weight2 + Weight1)
+		{
+            Enemy = Enemy3;
         }
         Instantiate(Enemy, randomPosition, Quaternion.identity);
     }
