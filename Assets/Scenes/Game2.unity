@@ -4192,7 +4192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Pivot.x
@@ -4279,11 +4279,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
---- !u!1 &1340706567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
-  m_PrefabInstance: {fileID: 1340706566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1340706568 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
@@ -4834,7 +4829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813d0bedf0bd41240b35fcb886add5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explainPanel: {fileID: 1340706567}
+  explainPanel: {fileID: 0}
   menuPanel: {fileID: 1730280747}
   menubutton: {fileID: 2078147293}
   returnButton: {fileID: 887653162}
@@ -5852,6 +5847,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7970287108300204432, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Name
       value: Menu Button_Back
@@ -6191,6 +6190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1552788765}
     m_Modifications:
+    - target: {fileID: 4341680498115971841, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7370296360930139594, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6203,13 +6206,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: menu
       objectReference: {fileID: 0}
+    - target: {fileID: 7970287108300204432, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5568628
+      objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Name
       value: Menu Panel
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Pivot.x
