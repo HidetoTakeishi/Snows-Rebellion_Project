@@ -11,6 +11,7 @@ public class SnowMan　: MonoBehaviour
 
     private GameManager gameManager;
     private AudioSource audioSource;
+    public GameObject SnowBall;
 
     private void Awake()
     {
@@ -67,6 +68,13 @@ public class SnowMan　: MonoBehaviour
         {
             // 雪玉に当たった場合、敵を消去
             Destroy(gameObject);
+            DropItem();
         }
+    }
+
+    private void DropItem()
+    {
+        // アイテムを生成して敵の位置に配置する
+        Instantiate(SnowBall, transform.position, Quaternion.identity);
     }
 }
