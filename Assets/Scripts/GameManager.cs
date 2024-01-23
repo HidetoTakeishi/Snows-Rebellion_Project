@@ -25,8 +25,6 @@ public class GameManager : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private AudioSource DestoroySE;
-
     private CursorChanger cursorChanger;
 
     private void Awake()
