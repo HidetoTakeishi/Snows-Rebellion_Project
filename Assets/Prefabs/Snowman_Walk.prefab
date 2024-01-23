@@ -127,9 +127,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e33bb70962755f4fb742216c7e481ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4467857179138370645}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e33bb70962755f4fb742216c7e481ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5993718958233868746}
   m_SourcePrefab: {fileID: 100100000, guid: 5e33bb70962755f4fb742216c7e481ac, type: 3}
 --- !u!1 &7362687819366866856 stripped
 GameObject:
@@ -218,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  SnowBall: {fileID: 6639830985735036105, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
 --- !u!82 &4467857179138370645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -314,16 +312,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5993718958233868746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7362687819366866856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e267ec562c1814d4a8424d1c63c4fcc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SnowBall: {fileID: 6639830985735036105, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
