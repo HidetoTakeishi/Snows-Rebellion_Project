@@ -21,9 +21,9 @@ public class CursorChanger : MonoBehaviour
         sightImg.transform.position = Input.mousePosition;   // É}ÉEÉXÇ…í«è]Ç≥ÇπÇÈ
     }
 
-    public void ChangeCursorVisible()
+    public void ChangeCursorVisible(bool isActive)
     {
-        Cursor.visible = !Cursor.visible;
+        Cursor.visible = isActive;
 
         sightImg.SetActive(!Cursor.visible);
     }

@@ -47,7 +47,7 @@ public class Explain : MonoBehaviour
         menubutton.SetActive(true);
         Time.timeScale = 1;   // 時間を元に戻す
 
-        cursorChanger.ChangeCursorVisible();
+        cursorChanger.ChangeCursorVisible(false);   // カーソルの切り替え
     }
 
 
@@ -59,7 +59,7 @@ public class Explain : MonoBehaviour
         audioSource.PlayOneShot(openSE);//SE再生
         menubutton.SetActive(false);
         menuPanel.SetActive(true);
-        cursorChanger.ChangeCursorVisible();
+        cursorChanger.ChangeCursorVisible(true);
 
         Time.timeScale = 0;
         print("とまる");
@@ -70,7 +70,7 @@ public class Explain : MonoBehaviour
         audioSource.PlayOneShot(closeSE);//SE再生
         menubutton.SetActive(true);   // 操作方法非表示
         menuPanel.SetActive(false);
-        cursorChanger.ChangeCursorVisible();
+        cursorChanger.ChangeCursorVisible(false);
 
         Time.timeScale = 1;   // 時間を元に戻す
     }
