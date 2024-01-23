@@ -5842,6 +5842,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7970287108300204432, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Name
       value: Menu Button_Back
@@ -6203,7 +6207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970287108300204432, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Name
@@ -6211,7 +6215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274153489127612213, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8422686327461482502, guid: 890604bad4aa74641bd0fb7fca6775a3, type: 3}
       propertyPath: m_Pivot.x
