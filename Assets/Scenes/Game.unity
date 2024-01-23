@@ -272,7 +272,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 746168913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &72839491
@@ -1982,6 +1983,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6300179322115065459, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
   m_PrefabInstance: {fileID: 1086034324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &746168913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f9aabc33c46db044091cde216be4ba94, type: 3}
+  m_PrefabInstance: {fileID: 2091664827}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &765098203
 PrefabInstance:
@@ -6498,11 +6504,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 52139324}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f9aabc33c46db044091cde216be4ba94, type: 3}
       propertyPath: m_LocalScale.x
-      value: 86.18887
+      value: 86.18888
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9aabc33c46db044091cde216be4ba94, type: 3}
       propertyPath: m_LocalScale.y
@@ -6510,7 +6516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9aabc33c46db044091cde216be4ba94, type: 3}
       propertyPath: m_LocalScale.z
-      value: 86.18887
+      value: 86.18888
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9aabc33c46db044091cde216be4ba94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6633,7 +6639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SnowMan: {fileID: 7362687819366866856, guid: 1ceac8896b7d4904c8f18042ff01c7a1, type: 3}
-  BombMan: {fileID: 7976078481326793348, guid: 02432e17a3e5bc94dac0606cb9aa72cf, type: 3}
+  BombMan: {fileID: 3341995888784974571, guid: 245487310b66a1f49b32baaef092d8eb, type: 3}
   spawnRate: 0.5
   maxEnemy: 30
 --- !u!4 &2128406724 stripped
@@ -6652,4 +6658,3 @@ SceneRoots:
   - {fileID: 2118869267}
   - {fileID: 1552788765}
   - {fileID: 52139324}
-  - {fileID: 2091664827}
