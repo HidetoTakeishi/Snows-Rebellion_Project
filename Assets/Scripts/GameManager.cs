@@ -25,9 +25,12 @@ public class GameManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private CursorChanger cursorChanger;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        cursorChanger = GetComponent<CursorChanger>();
     }
 
     // Start is called before the first frame update
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
 
         isGameclear = false;
         isGameover = false;
+
+        cursorChanger.ChangeCursorVisible(false);
     }
 
     // Update is called once per frame
