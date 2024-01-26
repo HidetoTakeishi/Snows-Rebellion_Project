@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("SnowBall Obj"))
         {
             Destroy(collision.gameObject);
-            snowPitch.snowballCount = 2;   // ê·ã ÇÃï‚è[
+            snowPitch.snowballCount += 2;   // ê·ã ÇÃï‚è[
         }
     }
 }
