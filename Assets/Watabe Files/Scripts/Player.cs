@@ -72,14 +72,11 @@ public class Player : MonoBehaviour
                 gameManager.Dead();   // ゲームオーバー処理
             }
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("SnowBall Obj"))
+        if (collision.gameObject.CompareTag("SnowBall Obj"))
         {
-            Destroy(other.gameObject);
-            snowPitch.snowballCount++;   // 雪玉の補充
+            Destroy(collision.gameObject);
+            snowPitch.snowballCount = 2;   // 雪玉の補充
         }
     }
 }

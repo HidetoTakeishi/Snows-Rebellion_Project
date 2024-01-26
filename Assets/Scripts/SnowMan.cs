@@ -74,6 +74,17 @@ public class SnowMan　: MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Explosion"))
+        {
+            audioSource.PlayOneShot(DestoroySE);//SE再生
+            // 雪玉に当たった場合、敵を消去
+            Destroy(gameObject);
+            DropItem();
+        }
+    }
+
     private void DropItem()
     {
         // アイテムを生成して敵の位置に配置する

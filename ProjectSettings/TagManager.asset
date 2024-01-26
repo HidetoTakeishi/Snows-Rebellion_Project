@@ -8,6 +8,8 @@ TagManager:
   - SnowBall
   - SnowMan
   - SnowBall Obj
+  - rock
+  - Explosion
   layers:
   - Default
   - TransparentFX
