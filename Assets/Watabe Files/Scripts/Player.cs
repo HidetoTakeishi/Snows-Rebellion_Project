@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     private AudioSource audioSource;
     private GameManager gameManager;
     private SnowPitching snowPitch;
-    private PlayerMove playerMove;
     private LifeControl lifeControl;
 
     public AudioClip DestoroySE;
@@ -23,7 +22,6 @@ public class Player : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         gameManager = FindAnyObjectByType<GameManager>();
         snowPitch = GetComponent<SnowPitching>();
-        playerMove = GetComponent<PlayerMove>();
         lifeControl = GetComponent<LifeControl>();
     }
 
