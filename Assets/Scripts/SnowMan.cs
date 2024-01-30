@@ -11,7 +11,8 @@ public class SnowMan　: MonoBehaviour
 
     private GameManager gameManager;
     private AudioSource audioSource;
-    public GameObject SnowBall;
+
+    public GameObject[] weapon;
 
     private void Awake()
     {
@@ -84,7 +85,20 @@ public class SnowMan　: MonoBehaviour
 
     private void DropItem()
     {
+        GameObject spawnWeapon = null;
+        int index = Random.Range(1, 100);
+        print(index);
+
+        if(index >= 5)
+        {
+            spawnWeapon = weapon[0];   // 雪玉生成
+        }
+        else if(index <= 15)
+        {
+            spawnWeapon = weapon[1];   // 爆弾生成
+        }
+
         // アイテムを生成して敵の位置に配置する
-        Instantiate(SnowBall, transform.position, Quaternion.identity);
+        Instantiate(spawnWeapon, transform.position, Quaternion.identity);
     }
 }

@@ -82,6 +82,12 @@ public class Player : MonoBehaviour
             snowPitch.snowballCount += 2;   // ê·ã ÇÃï‚è[
             SESource.instance.PlaySE(vacuumSE);
         }
+        if(collision.gameObject.CompareTag("Bomb Obj"))
+        {
+            Destroy(collision.gameObject);
+            snowPitch.bombCount++;   // îöíeÇÃï‚è[
+            SESource.instance.PlaySE(vacuumSE);
+        }
     }
 
 

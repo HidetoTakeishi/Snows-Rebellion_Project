@@ -215,8 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
-  DestoroySE: {fileID: 8300000, guid: a82d497be1af55141b49fce292feddb6, type: 3}
-  SnowBall: {fileID: 6639830985735036105, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
+  weapon:
+  - {fileID: 6639830985735036105, guid: 12893a1682b80c5468719d253c1075a0, type: 3}
+  - {fileID: 7808661704273159454, guid: 310f5b116f3ee8e4a8618b574870f52f, type: 3}
 --- !u!82 &4467857179138370645
 AudioSource:
   m_ObjectHideFlags: 0

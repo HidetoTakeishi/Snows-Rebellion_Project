@@ -4339,7 +4339,7 @@ MonoBehaviour:
   clearUI:
   - {fileID: 905989271}
   - {fileID: 1319716895}
-  clearConditions: 10
+  clearConditions: 100
   killCount: 0
   gameocerSE: {fileID: 8300000, guid: 4d02e71cd9d8c3541a266f4eb366b8d2, type: 3}
 --- !u!114 &1552788767
@@ -6212,7 +6212,7 @@ MonoBehaviour:
   Enemy1: {fileID: 7362687819366866856, guid: 1ceac8896b7d4904c8f18042ff01c7a1, type: 3}
   Weight1: 1
   Enemy2: {fileID: 3341995888784974571, guid: 245487310b66a1f49b32baaef092d8eb, type: 3}
-  Weight2: 1
+  Weight2: 0
   Enemy3: {fileID: 0}
   Weight3: 0
   spawnRate: 0.5
