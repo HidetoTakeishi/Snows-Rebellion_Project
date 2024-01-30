@@ -11,7 +11,6 @@ public class SnowMan　: MonoBehaviour
 
     private GameManager gameManager;
     private AudioSource audioSource;
-    public AudioClip DestoroySE;
     public GameObject SnowBall;
 
     private void Awake()
@@ -67,7 +66,6 @@ public class SnowMan　: MonoBehaviour
 
         if (collision.gameObject.CompareTag("SnowBall"))
         {
-            audioSource.PlayOneShot(DestoroySE);//SE再生
             // 雪玉に当たった場合、敵を消去
             Destroy(gameObject);
             DropItem();
@@ -78,7 +76,6 @@ public class SnowMan　: MonoBehaviour
     {
         if (other.gameObject.CompareTag("Explosion"))
         {
-            audioSource.PlayOneShot(DestoroySE);//SE再生
             // 雪玉に当たった場合、敵を消去
             Destroy(gameObject);
             DropItem();

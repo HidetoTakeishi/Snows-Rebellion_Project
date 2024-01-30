@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SnowBall : MonoBehaviour
 {
+    public AudioClip destroyse;
     private GameManager gameManager;
 
     private void Awake()
@@ -29,6 +30,7 @@ public class SnowBall : MonoBehaviour
         {
             Destroy(gameObject);
             gameManager.killCount++;   // Œ‚”j”‚ÌƒJƒEƒ“ƒg
+            SESource.instance.PlaySE(destroyse);
         }
     }
 }
