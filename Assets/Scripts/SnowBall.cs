@@ -30,7 +30,7 @@ public class SnowBall : MonoBehaviour
         {
             Destroy(gameObject);
             gameManager.killCount++;   // Œ‚”j”‚ÌƒJƒEƒ“ƒg
-            SESource.instance.PlaySE(destroyse);
+            //SESource.instance.PlaySE(destroyse);
         }
     }
 }
