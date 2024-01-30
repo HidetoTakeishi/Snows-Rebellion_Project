@@ -67,14 +67,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        if (!gameManager.IsGameover && !gameManager.IsGameclear)
-        {
-            playerMove.MoveHorizontal();   // ‰¡ˆÚ“®
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (!gameManager.IsGameclear && !gameManager.IsGameover)
