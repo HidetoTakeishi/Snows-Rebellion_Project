@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
                 if (Input.GetMouseButton(1))
                 {
                     vacuumArea.SetActive(true);   // ‹zˆøƒGƒŠƒA‚ð—LŒø‰»
-
                 }
                 else
                 {
@@ -89,6 +88,4 @@ public class Player : MonoBehaviour
             SESource.instance.PlaySE(vacuumSE);
         }
     }
-
-
 }
