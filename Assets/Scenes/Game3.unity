@@ -5203,6 +5203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow Raccoon Street
       objectReference: {fileID: 0}
+    - target: {fileID: 2929640277652407947, guid: 5dec0c40ad1bc2142bd7b7d25a915d3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cbe574bad8aaea409b9cd7a856b4287, type: 2}
     - target: {fileID: 4852528481542871708, guid: 5dec0c40ad1bc2142bd7b7d25a915d3b, type: 3}
       propertyPath: m_IsActive
       value: 0
