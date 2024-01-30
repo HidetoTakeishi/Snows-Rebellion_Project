@@ -139,8 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f2a1a8fb8672d4a96ec33939f64d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnowMan: {fileID: 0}
-  BombMan: {fileID: 0}
+  Enemy1: {fileID: 0}
+  Weight1: 0
+  Enemy2: {fileID: 0}
+  Weight2: 0
+  Enemy3: {fileID: 0}
+  Weight3: 0
   spawnRate: 2
   maxEnemy: 10
 --- !u!114 &3614521160255318579
@@ -155,4 +159,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0557e30fad2563349bef178d30592ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
+  SnowBall: {fileID: 0}
