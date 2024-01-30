@@ -54,11 +54,11 @@ public class Player : MonoBehaviour
                     audioSource.PlayOneShot(DestoroySE);//SEçƒê∂
                 }
 
-                snowPitch.SwitchWeapon(audioSource);
+                snowPitch.SwitchWeapon();
             }
         }
 
-        if(lifeControl.GetLife() <= 0 && deadTrigger)
+        if(lifeControl.Life <= 0 && deadTrigger)
         {
             gameManager.Dead();
             deadTrigger = false;
@@ -80,6 +80,12 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             snowPitch.snowballCount += 2;   // ê·ã ÇÃï‚è[
+            SESource.instance.PlaySE(vacuumSE);
+        }
+        if(collision.gameObject.CompareTag("Bomb Obj"))
+        {
+            Destroy(collision.gameObject);
+            snowPitch.bombCount++;   // îöíeÇÃï‚è[
             SESource.instance.PlaySE(vacuumSE);
         }
     }

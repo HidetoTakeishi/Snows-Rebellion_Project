@@ -10,6 +10,7 @@ TagManager:
   - SnowBall Obj
   - rock
   - Explosion
+  - Bomb Obj
   layers:
   - Default
   - TransparentFX

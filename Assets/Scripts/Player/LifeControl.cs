@@ -13,8 +13,8 @@ public class LifeControl : MonoBehaviour
         print(lifePoint);
     }
 
-    public int GetLife()
+    public int Life
     {
-        return lifePoint;
+        get { return lifePoint; }
     }
 }

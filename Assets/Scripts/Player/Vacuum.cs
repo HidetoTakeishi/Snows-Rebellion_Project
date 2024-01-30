@@ -12,7 +12,7 @@ public class Vacuum : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("SnowBall Obj"))
+        if(other.gameObject.CompareTag("SnowBall Obj") || other.gameObject.CompareTag("Bomb Obj"))
         {
             Vector3 direction = (player.position - other.transform.position).normalized;   // ベクトルの計算をして正規化
             other.transform.position += direction * vacuumSpeed;   // 正規化したベクトルに吸引速度を掛け合わせて適用
