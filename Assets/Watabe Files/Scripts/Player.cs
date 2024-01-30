@@ -9,10 +9,13 @@ public class Player : MonoBehaviour
     [Header("雪玉を吸い込んだ時のSE"), SerializeField]
     private AudioClip vacuumSE;
 
+    private bool deadTrigger = true;
+
     private AudioSource audioSource;
     private GameManager gameManager;
     private SnowPitching snowPitch;
     private PlayerMove playerMove;
+    private LifeControl lifeControl;
 
     public AudioClip DestoroySE;
     private void Awake()
@@ -21,6 +24,7 @@ public class Player : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         snowPitch = GetComponent<SnowPitching>();
         playerMove = GetComponent<PlayerMove>();
+        lifeControl = GetComponent<LifeControl>();
     }
 
     // Start is called before the first frame update
@@ -55,6 +59,12 @@ public class Player : MonoBehaviour
                 snowPitch.SwitchWeapon(audioSource);
             }
         }
+
+        if(lifeControl.GetLife() <= 0 && deadTrigger)
+        {
+            gameManager.Dead();
+            deadTrigger = false;
+        }
     }
 
     private void FixedUpdate()
@@ -71,7 +81,8 @@ public class Player : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("SnowMan"))
             {
-                gameManager.Dead();   // ゲームオーバー処理
+                lifeControl.Damage();
+                //gameManager.Dead();   // ゲームオーバー処理
             }
         }
 
@@ -82,4 +93,6 @@ public class Player : MonoBehaviour
             SESource.instance.PlaySE(vacuumSE);
         }
     }
+
+
 }
