@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(lifeControl.GetLife() <= 0 && deadTrigger)
+        if(lifeControl.Life <= 0 && deadTrigger)
         {
             gameManager.Dead();
             deadTrigger = false;
