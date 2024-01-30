@@ -23,9 +23,14 @@ public class GameManager : MonoBehaviour
     [Header("ゲームオーバー時のSE"), SerializeField]
     private AudioClip gameocerSE;
 
+    [Header("ゲームクリア時のSE"), SerializeField]
+    private AudioClip gameClearSE;
+
     private AudioSource audioSource;
 
     private CursorChanger cursorChanger;
+
+    bool trigger = true;
 
     private void Awake()
     {
@@ -57,6 +62,11 @@ public class GameManager : MonoBehaviour
     {
         if(killCount >= clearConditions && !isGameover)   // クリア条件を達成したら
         {
+            if (trigger == true)
+            {
+                audioSource.PlayOneShot(gameClearSE);
+                trigger = false;
+            }
             isGameclear = true;
             for (int i = 0; i < clearUI.Length; i++)
             {
