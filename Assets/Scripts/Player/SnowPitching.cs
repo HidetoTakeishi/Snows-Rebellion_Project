@@ -57,13 +57,13 @@ public class SnowPitching : MonoBehaviour
         }
     }
 
-    public void SwitchWeapon(AudioSource _audioSource)   // •Ší‚ÌØ‚è‘Ö‚¦ˆ—
+    public void SwitchWeapon()   // •Ší‚ÌØ‚è‘Ö‚¦ˆ—
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             useBomb = !useBomb;
 
-            _audioSource.PlayOneShot(switchWeaponSE);
+            SESource.instance.PlaySE(switchWeaponSE);
         }
     }
 }

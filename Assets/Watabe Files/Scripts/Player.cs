@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
                     audioSource.PlayOneShot(DestoroySE);//SEçƒê∂
                 }
 
-                snowPitch.SwitchWeapon(audioSource);
+                snowPitch.SwitchWeapon();
             }
         }
 
