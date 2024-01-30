@@ -17,6 +17,8 @@ public class Explain : MonoBehaviour
     [Header("ゲームに戻るボタン"), SerializeField]
     private GameObject returnButton;
 
+    public static bool isDispExplain = true;
+
     public AudioClip closeSE;
     public AudioClip openSE;
     AudioSource audioSource;
@@ -34,9 +36,18 @@ public class Explain : MonoBehaviour
 
         if (explainPanel != null)
         {
-            menubutton.SetActive(false);
-            explainPanel.SetActive(true);   // 操作方法表示
-            Time.timeScale = 0;   // 時間停止
+            if(isDispExplain)
+            {
+                menubutton.SetActive(false);
+                explainPanel.SetActive(true);   // 操作方法表示
+                Time.timeScale = 0;   // 時間停止
+
+                isDispExplain = false;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
         else
         {
