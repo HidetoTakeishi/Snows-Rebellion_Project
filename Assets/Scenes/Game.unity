@@ -369,15 +369,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862160160942426658, guid: dc5c47fb1ddad3143b762830feafa86a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 139.77509
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862160160942426658, guid: dc5c47fb1ddad3143b762830feafa86a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -80.33866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862160160942426658, guid: dc5c47fb1ddad3143b762830feafa86a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 333.9857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862160160942426658, guid: dc5c47fb1ddad3143b762830feafa86a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vacuumArea: {fileID: 874864507}
+  vacuumSE: {fileID: 8300000, guid: 102f2b3694eab0c419488edd0944e0f2, type: 3}
   DestoroySE: {fileID: 8300000, guid: a82d497be1af55141b49fce292feddb6, type: 3}
 --- !u!82 &171815680
 AudioSource:

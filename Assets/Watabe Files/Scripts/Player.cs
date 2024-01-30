@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     [Header("吸引エリアのオブジェクト"), SerializeField]
     private GameObject vacuumArea;
+    [Header("雪玉を吸い込んだ時のSE"), SerializeField]
+    private AudioClip vacuumSE;
 
     private AudioSource audioSource;
     private GameManager gameManager;
@@ -77,6 +79,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             snowPitch.snowballCount += 2;   // 雪玉の補充
+            SESource.instance.PlaySE(vacuumSE);
         }
     }
 }
