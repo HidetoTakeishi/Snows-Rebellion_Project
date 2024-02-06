@@ -11,6 +11,7 @@ TagManager:
   - rock
   - Explosion
   - Bomb Obj
+  - Bird
   layers:
   - Default
   - TransparentFX
