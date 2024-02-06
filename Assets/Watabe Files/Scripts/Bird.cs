@@ -5,34 +5,40 @@ using UnityEngine.UIElements;
 
 public class Bird : MonoBehaviour
 {
+    [Header("前進速度"), SerializeField]
+    private float speed = 1;
+
     // 円の半径を設定します。
     public float radius = 10f;
 
-    // 初期位置を取得し、高さを保持します。
-    Vector3 initPos;
+    private float height;
+
+    private Transform player;
 
     void Start()
     {
-        // 初期位置を保持します。
-        //initPos = gameObject.transform.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
-        CalcPosition();
+        //CalcPosition();
+        Coming();
+    }
+
+    void Coming()
+    {
+        transform.LookAt(player.position);
+        
+        transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
     void CalcPosition()
     {
-        // 位相を計算します。
         float phase = Time.time * 1 * Mathf.PI;
 
-        // 現在の位置を計算します。
-        //float xPos = radius * Mathf.Cos(phase);
         float yPos = radius * Mathf.Sin(phase);
 
-        // ゲームオブジェクトの位置を設定します。
-        //Vector3 pos = new Vector3(initPos.x, yPos, initPos.z);
-        gameObject.transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+        gameObject.transform.position = new Vector3(transform.position.x, yPos + 35, transform.position.z);
     }
 }
