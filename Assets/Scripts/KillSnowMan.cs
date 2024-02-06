@@ -30,17 +30,16 @@ public class KillSnowMan : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("SnowBall"))
         {
-            Destroy(other1);
-            Destroy(other2);
             rb = body1.GetComponent<Rigidbody>();
             rb.useGravity = true;
-            rb.AddForce(new Vector3(0.0f, 0.0f, 1000.0f));
             rb = body2.GetComponent<Rigidbody>();
             rb.useGravity = true;
-            rb.AddForce(new Vector3(0.0f, 0.0f, 1000.0f));
             rb = body3.GetComponent<Rigidbody>();
             rb.useGravity = true;
-            rb.AddForce(new Vector3(0.0f, 0.0f, 1000.0f));
+            rb = other1.GetComponent<Rigidbody>();
+            rb.useGravity = true;
+            rb = other2.GetComponent<Rigidbody>();
+            rb.useGravity = true;
         }
     }
 }
