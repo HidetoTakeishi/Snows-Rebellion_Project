@@ -11,8 +11,6 @@ public class Bird : MonoBehaviour
     // â~ÇÃîºåaÇê›íËÇµÇ‹Ç∑ÅB
     public float radius = 10f;
 
-    private float height;
-
     private Transform player;
 
     void Start()
@@ -35,9 +33,9 @@ public class Bird : MonoBehaviour
 
     void CalcPosition()
     {
-        float phase = Time.time * 1 * Mathf.PI;
+        float phase = Time.time * 1 * Mathf.PI + transform.position.y;
 
-        float yPos = radius * Mathf.Sin(phase);
+        float yPos = radius * Mathf.Sin(phase / 5);
 
         gameObject.transform.position = new Vector3(transform.position.x, yPos + 35, transform.position.z);
     }
