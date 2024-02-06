@@ -13,9 +13,13 @@ public class Bird : MonoBehaviour
 
     private Transform player;
 
+    private GameManager gameManager;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     void Update()
@@ -26,9 +30,12 @@ public class Bird : MonoBehaviour
 
     void Coming()
     {
-        transform.LookAt(player.position);
-        
-        transform.Translate(0, 0, speed * Time.deltaTime);
+        if(!gameManager.IsGameclear && !gameManager.IsGameover)
+        {
+            transform.LookAt(player.position);
+
+            transform.Translate(0, 0, speed * Time.deltaTime);
+        }
     }
 
     void CalcPosition()
@@ -38,5 +45,13 @@ public class Bird : MonoBehaviour
         float yPos = radius * Mathf.Sin(phase / 5);
 
         gameObject.transform.position = new Vector3(transform.position.x, yPos + 35, transform.position.z);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

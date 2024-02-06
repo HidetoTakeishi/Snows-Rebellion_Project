@@ -73,6 +73,11 @@ public class Player : MonoBehaviour
                 lifeControl.Damage();
                 //gameManager.Dead();   // ゲームオーバー処理
             }
+            if (collision.gameObject.CompareTag("Bird"))
+            {
+                lifeControl.Damage();
+                //gameManager.Dead();   // ゲームオーバー処理
+            }
         }
 
         if (collision.gameObject.CompareTag("SnowBall Obj"))
