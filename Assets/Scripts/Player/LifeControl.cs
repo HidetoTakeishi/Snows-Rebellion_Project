@@ -7,14 +7,19 @@ public class LifeControl : MonoBehaviour
 {
     [Header("プレイヤーライフ"), SerializeField]
     private int lifePoint = 3;
-    private Image DamageImage;
+    public GameObject DamageImage;
 
     public void Damage()
     {
         lifePoint--;
         print(lifePoint);
+        DamageImage.gameObject.SetActive(true);
+        Invoke("DamageTime", 0.05f);
+    }
+
+    public void DamageTime()
+    {
         DamageImage.gameObject.SetActive(false);
-        Invoke("DamageImage", 0.1f);
     }
 
     public int Life
