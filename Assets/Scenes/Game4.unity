@@ -1515,7 +1515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next stage
+  m_Text: Next...
 --- !u!222 &517443570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3685,7 +3685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0fcffdd1e34be42bc1d25cf0585431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Game 2
+  sceneName: GameClear
 --- !u!114 &1319716898
 MonoBehaviour:
   m_ObjectHideFlags: 0
