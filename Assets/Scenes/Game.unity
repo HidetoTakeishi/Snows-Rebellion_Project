@@ -2557,6 +2557,7 @@ GameObject:
   m_PrefabInstance: {fileID: 793237429218433479}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1517222758}
@@ -2892,6 +2893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sightImg: {fileID: 422247172}
+=======
+>>>>>>> 227cc5403179d4a55bf99d1960b4f37d6c7687a0
 =======
 >>>>>>> 227cc5403179d4a55bf99d1960b4f37d6c7687a0
 --- !u!1001 &1557854039
