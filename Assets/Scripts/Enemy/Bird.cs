@@ -52,4 +52,13 @@ public class Bird : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Explosion"))
+        {
+            // á‹Ê‚É“–‚½‚Á‚½ê‡A“G‚ğÁ‹
+            Destroy(gameObject);
+        }
+    }
 }
