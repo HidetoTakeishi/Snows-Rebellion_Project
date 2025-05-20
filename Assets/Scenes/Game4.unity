@@ -1532,6 +1532,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2788001646702093571, guid: 9392ab8a4ae848b46a373d97a3fb2f84, type: 3}
+      propertyPath: DamageImage
+      value: 
+      objectReference: {fileID: 1930330187}
     - target: {fileID: 7597486702103257620, guid: 9392ab8a4ae848b46a373d97a3fb2f84, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4006,11 +4010,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102930524319193182, guid: 35658fa570086094f9e9744567934de8, type: 3}
       propertyPath: sceneName
-      value: GameClear
+      value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247037888333082059, guid: 35658fa570086094f9e9744567934de8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247037888333082059, guid: 35658fa570086094f9e9744567934de8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2577352166494307016, guid: 35658fa570086094f9e9744567934de8, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2609984895631233465, guid: 35658fa570086094f9e9744567934de8, type: 3}
+      propertyPath: m_Text
+      value: Back Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782331116915187436, guid: 35658fa570086094f9e9744567934de8, type: 3}
+      propertyPath: m_Name
+      value: Back Title Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782331116915187436, guid: 35658fa570086094f9e9744567934de8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3657300781760448277, guid: 35658fa570086094f9e9744567934de8, type: 3}
       propertyPath: explainPanel
@@ -4101,6 +4125,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35658fa570086094f9e9744567934de8, type: 3}
+--- !u!1 &1930330187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 377999070227893315, guid: 35658fa570086094f9e9744567934de8, type: 3}
+  m_PrefabInstance: {fileID: 1930330186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2029165016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6300179322115065459, guid: 12893a1682b80c5468719d253c1075a0, type: 3}

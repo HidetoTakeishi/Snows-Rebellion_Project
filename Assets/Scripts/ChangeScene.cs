@@ -9,9 +9,15 @@ public class ChangeScene : MonoBehaviour
     [Header("ì«Ç›çûÇﬁÉVÅ[ÉìÇÃñºëO"), SerializeField]
     private string sceneName;
 
-    public void OnClick()
+    public void OnClick(bool isActiveCursor)
     {
         SceneManager.LoadScene(sceneName);
+
+        if (isActiveCursor)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
    
     public void Retry()
